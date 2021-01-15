@@ -5,7 +5,9 @@ Haven't written this today, but this is a rewrite of a local thing I wrote back 
 That tool separated a flagged file into chunks until it stopped being flagged by the local AV client.
 
 VT api public access is 4 requests per minute. This will default to that first. Potentially allow for api keys in a future version.
-V1 will work on scripts. "The Public API is limited to 500 requests per day and a rate of 4 requests per minute." If a bunch of people are using this, it's goint o get banned. I'm not advertising this, just putting it in a public github, so we'll see. If you have an api key, use it.
+V1 will work on scripts. "The Public API is limited to 500 requests per day and a rate of 4 requests per minute." 
+If a bunch of people are using this, it may be considered abuse. Don't use this for abuse. 
+If you or your corp pay for an api key, use it please and feel free to remove limiters on rate at that point.
 
 ## Submit script to VT, see if it detects.
 
@@ -21,7 +23,7 @@ V1 will work on scripts. "The Public API is limited to 500 requests per day and 
 
 		+ Also record matches in a csv/json/tbd format to determine when AVs cut off.
 
-## Later ideas for future projects:
+## Later ideas for future projects to see what evasion techniques are still caught, and by whom:
 
 + Submit scripts with a nop added (language specific) to throw off checksums and see if that works.
 
@@ -33,8 +35,8 @@ V1 will work on scripts. "The Public API is limited to 500 requests per day and 
 
 + Detect sandbox and hide if sandboxed. (yeah, for now just call other stuff from this. They've done it better)
 
-## Ways to automatically bypass AV:
+## Ways to automatically bypass AV that shouldn't work, but too frequently do. I eventually want to test these:
 	
 + filter out script-name from script itself (regex it out)
 	
-+ replace variable-name with other_var_name
++ replace variable-name in triggering portion with other_var_name
